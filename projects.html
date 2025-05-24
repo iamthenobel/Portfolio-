@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="author" content="THE BOSS" />
+  <meta name="description" content="A modern, responsive portfolio showcasing advanced UI/UX, creative web apps, and professional design systems." />
+  <link rel="icon" href="https://i.postimg.cc/cH2Q2ZNs/IMG-1170.png" />
+  <title>Projects & Designs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    :root {
+      --primary: #7f5af0;
+      --bg-dark: #252525;
+      --text-light: #ffffff;
+    }
+    .loader {
+      border: 4px solid transparent;
+      border-top: 4px solid var(--primary);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-white text-black dark:bg-[var(--bg-dark)] dark:text-[var(--text-light)] transition duration-300 font-sans">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4">
+    <h1 class="text-2xl font-bold">My Showcase</h1>
+    <div class="relative group">
+      <button class="flex items-center gap-1 hover:text-[var(--primary)]">
+        <i data-feather="menu"></i> 
+      </button>
+      <ul class="absolute right-0 mt-2 w-56 bg-white dark:bg-zinc-800 rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition z-50">
+        <li><a href="mailto:iamtheboss357286@gmail.com" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-zinc-700">
+          <i data-feather="mail"></i> Contact Me
+        </a></li>
+        <li><a href="https://symmetrymini.netlify.app/support" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-zinc-700"><i data-feather="heart"></i> Support</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="px-6 py-10 space-y-20 max-w-6xl mx-auto">
+
+    <!-- Projects -->
+    <section>
+      <h2 class="text-3xl font-semibold text-center mb-8 fade-in">Projects</h2>
+
+      <div class="space-y-16">
+
+        <!-- Project 1 -->
+        <div class="space-y-4 fade-in">
+          <h3 class="text-2xl font-bold">ChemTool</h3>
+          <p class="text-gray-600 dark:text-gray-400">Clean and user friendly analytical calculator for better lab experience.</p>
+
+          <div class="relative h-[450px] border rounded overflow-hidden">
+            <div class="absolute inset-0 flex justify-center items-center bg-white dark:bg-zinc-800 z-10" id="loader-1">
+              <div class="loader"></div>
+            </div>
+            <iframe
+              src="https://thebosschemlab.netlify.app"
+              class="w-full h-full overflow-auto"
+              loading="lazy"
+              onload="document.getElementById('loader-1').style.display='none';"
+            ></iframe>
+          </div>
+
+          <div class="flex gap-4 mt-3">
+            <a href="https://tailwindui.com" target="_blank" class="px-4 py-2 bg-[var(--primary)] text-white rounded hover:opacity-90">Visit Site</a>
+            <a href="https://github.com/iamthenobel" target="_blank" class="px-4 py-2 border border-[var(--primary)] text-[var(--primary)] rounded hover:bg-[var(--primary)] hover:text-white">View Source</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="space-y-4 fade-in">
+          <h3 class="text-2xl font-bold">Symmetry Mini</h3>
+          <p class="text-gray-600 dark:text-gray-400">An interactive tool for exploring molecular symmetry, point groups, and group theory formulas with dynamic visuals and searchable data.</p>
+
+          <div class="relative h-[450px] border rounded overflow-hidden">
+            <div class="absolute inset-0 flex justify-center items-center bg-white dark:bg-zinc-800 z-10" id="loader-2">
+              <div class="loader"></div>
+            </div>
+            <iframe
+              src="https://symmetrymini.netlify.app/"
+              class="w-full h-full overflow-auto"
+              loading="lazy"
+              onload="document.getElementById('loader-2').style.display='none';"
+            ></iframe>
+          </div>
+
+          <div class="flex gap-4 mt-3">
+            <a href="https://thebosschemlab.netlify.app/" target="_blank" class="px-4 py-2 bg-[var(--primary)] text-white rounded hover:opacity-90">Visit Site</a>
+            <a href="https://github.com/iamthenobel" target="_blank" class="px-4 py-2 border border-[var(--primary)] text-[var(--primary)] rounded hover:bg-[var(--primary)] hover:text-white">View Source</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Designs -->
+    <section id="designs">
+      <h2 class="text-3xl font-semibold text-center mb-8 fade-in">Design Gallery</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Design 1 -->
+        <div class="bg-white dark:bg-zinc-800 rounded shadow-md overflow-hidden">
+          <img
+            src="https://i.postimg.cc/xjpGNvkw/IMG-0576.png"
+            alt="Design 1"
+            class="w-full h-48 object-cover pointer-events-none"
+            oncontextmenu="return false;"
+            draggable="false"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Minimal Dashboard</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Elegant dashboard built for clarity and focus.</p>
+            <button onclick="window.location='mailto:you@example.com?subject=Request%20Design'"
+              class="mt-4 px-4 py-2 bg-[var(--primary)] text-white rounded hover:opacity-90 flex items-center gap-2">
+              <i data-feather="mail"></i> Request Design
+            </button>
+          </div>
+        </div>
+
+        <!-- Design 2 -->
+        <div class="bg-white dark:bg-zinc-800 rounded shadow-md overflow-hidden">
+          <img
+            src="https://i.postimg.cc/GttkS2fg/IMG-0580.webp"
+            alt="Design 2"
+            class="w-full h-48 object-cover pointer-events-none"
+            oncontextmenu="return false;"
+            draggable="false"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Startup Hero Page</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Visually engaging landing section with smart CTA.</p>
+            <button onclick="window.location='mailto:you@example.com?subject=Request%20Design'"
+              class="mt-4 px-4 py-2 bg-[var(--primary)] text-white rounded hover:opacity-90 flex items-center gap-2">
+              <i data-feather="mail"></i> Request Design
+            </button>
+          </div>
+        </div>
+        <!-- Design 3 -->
+        <div class="bg-white dark:bg-zinc-800 rounded shadow-md overflow-hidden">
+          <img src="https://i.postimg.cc/SRPW04FS/IMG-0578.png" alt="Design 1" class="w-full h-48 object-cover pointer-events-none" oncontextmenu="return false;" draggable="false" />
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Portfolio Grid Layout</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Minimal grid-based portfolio with clean transitions.</p>
+            <button onclick="window.location='mailto:you@example.com?subject=Request%20Design'" class="mt-4 px-4 py-2 bg-[var(--primary)] text-white rounded hover:opacity-90 flex items-center gap-2">
+              <i data-feather="mail"></i> Request Design
+            </button>
+          </div>
+        </div>
+        
+        <!-- Design 4 -->
+        <div class="bg-white dark:bg-zinc-800 rounded shadow-md overflow-hidden">
+          <img src="https://i.postimg.cc/pTqfZ8sn/IMG-0615.png" alt="Design 2" class="w-full h-48 object-cover pointer-events-none" oncontextmenu="return false;" draggable="false" />
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Startup Hero Page</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Visually engaging landing section with smart CTA.</p>
+            <button onclick="window.location='mailto:you@example.com?subject=Request%20Design'" class="mt-4 px-4 py-2 bg-[var(--primary)] text-white rounded hover:opacity-90 flex items-center gap-2">
+              <i data-feather="mail"></i> Request Design
+            </button>
+          </div>
+        </div>
+        
+        <!-- Design 6 -->
+        <div class="bg-white dark:bg-zinc-800 rounded shadow-md overflow-hidden">
+          <img src="https://i.postimg.cc/wv65LFQp/IMG-0616.png" alt="Design 3" class="w-full h-48 object-cover pointer-events-none" oncontextmenu="return false;" draggable="false" />
+          <div class="p-4">
+            <h3 class="text-xl font-bold">E-commerce Product Card</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Interactive product display with pricing and ratings.</p>
+            <button onclick="window.location='mailto:you@example.com?subject=Request%20Design'" class="mt-4 px-4 py-2 bg-[var(--primary)] text-white rounded hover:opacity-90 flex items-center gap-2">
+              <i data-feather="mail"></i> Request Design
+            </button>
+          </div>
+        </div>
+        
+        <!-- Design 7 -->
+        <div class="bg-white dark:bg-zinc-800 rounded shadow-md overflow-hidden">
+          <img src="https://i.postimg.cc/VLTFpqmq/IMG-0633.png" alt="Design 4" class="w-full h-48 object-cover pointer-events-none" oncontextmenu="return false;" draggable="false" />
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Health Care Website</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Responsive grid for health related issues.</p>
+            <button onclick="window.location='mailto:you@example.com?subject=Request%20Design'" class="mt-4 px-4 py-2 bg-[var(--primary)] text-white rounded hover:opacity-90 flex items-center gap-2">
+              <i data-feather="mail"></i> Request Design
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 dark:text-gray-400 text-sm py-10">
+    © 2025 THE BOSS. All rights reserved.
+  </footer>
+
+  <script>
+    feather.replace();
+    document.addEventListener('contextmenu', (e) => {
+      if (e.target.tagName === 'IMG') e.preventDefault();
+    });
+  </script>
+</body>
+</html>
